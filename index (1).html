@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chili Barbers - Reserva tu cita</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .form-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+            color: #c0392b;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select, button {
+            margin: 0.5rem 0;
+            padding: 0.75rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #c0392b;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+        button:hover {
+            background-color: #a93226;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Reserva tu cita</h1>
+        <form name="reserva" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="reserva">
+
+            <input type="text" name="nombre" placeholder="Nombre completo" required>
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="tel" name="telefono" placeholder="Teléfono" required>
+
+            <select name="servicio" required>
+                <option value="">Selecciona un servicio</option>
+                <option>Corte de cabello</option>
+                <option>Afeitado</option>
+                <option>Barba y cabello</option>
+            </select>
+
+            <input type="date" name="fecha" required>
+            <input type="time" name="hora" required>
+
+            <button type="submit">Reservar</button>
+        </form>
+    </div>
+</body>
+</html>
