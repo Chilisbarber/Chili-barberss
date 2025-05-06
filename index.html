@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chili Barbers - Reservaciones</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+    }
+
+    header {
+      background-color: #c0392b;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h2 {
+      color: #c0392b;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, select, textarea, button {
+      padding: 0.8rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #c0392b;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e74c3c;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #eee;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Chili Barbers</h1>
+  <p>¡Reserva tu estilo con nosotros!</p>
+</header>
+
+<div class="container">
+  <h2>Reserva tu cita</h2>
+  <form id="reserva-form">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" required>
+
+    <label for="telefono">Teléfono:</label>
+    <input type="tel" id="telefono" required>
+
+    <label for="servicio">Servicio:</label>
+    <select id="servicio" required>
+      <option value="">Selecciona un servicio</option>
+      <option>Corte de cabello</option>
+      <option>Afeitado</option>
+      <option>Barba y cabello</option>
+    </select>
+
+    <label for="fecha">Fecha:</label>
+    <input type="date" id="fecha" required>
+
+    <label for="hora">Hora:</label>
+    <input type="time" id="hora" required>
+
+    <button type="submit">Reservar</button>
+  </form>
+</div>
+
+<footer>
+  <p>© 2025 Chili Barbers. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  document.getElementById("reserva-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    alert("¡Tu cita ha sido reservada con éxito!");
+    // Aquí puedes agregar el código para enviar los datos a un servidor o base de datos
+  });
+</script>
+
+</body>
+</html>
